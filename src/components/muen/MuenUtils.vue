@@ -30,24 +30,19 @@
     methods:{
 
     },
+    beforeMount:function () {
+      if(this.colorType === 1){
+        this.muenColor1="color:chartreuse";
+      }else  if(this.colorType === 2){
+        this.muenColor2="color:chartreuse";
+      }else  if(this.colorType === 3){
+        this.muenColor3="color:chartreuse";
+      }else  if(this.colorType === 4){
+        this.muenColor4="color:chartreuse";
+      }
+    },
     computed: {
-      type:function(){
-        if(this.colorType === 1){
-          this.muenColor1="color:chartreuse";
-        }else  if(this.colorType === 2){
-          this.muenColor2="color:chartreuse";
-        }else  if(this.colorType === 3){
-          this.muenColor3="color:chartreuse";
-        }else  if(this.colorType === 4){
-          this.muenColor4="color:chartreuse";
-        }
-      },
-      filters: {
-        formatDate(time) {
-          var date = new Date(time);
-          return formatDate(date, 'yyyy-MM-dd');
-        }
-      },
+
     }
   }
 </script>
